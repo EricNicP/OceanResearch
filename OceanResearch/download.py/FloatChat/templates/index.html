@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ARGO Float Data</title>
+</head>
+<body>
+    <h1>ARGO Float Data</h1>
+    <h2>Processed CSV Files</h2>
+    <ul>
+        {% for file in csv_files %}
+            <li>{{ file }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Plots</h2>
+    {% for plot in plots %}
+        <img src="/static/{{ plot }}" alt="{{ plot }}" width="500">
+    {% endfor %}
+</body>
+</html>
